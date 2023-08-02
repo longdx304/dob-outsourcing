@@ -1,7 +1,8 @@
-import { defaultLocale } from '@/src/middleware';
-import './styles/global.css';
+import { defaultLocale } from '@/middleware';
+import '@/styles/global.css';
 import type { Metadata } from 'next';
 import { Be_Vietnam_Pro } from 'next/font/google';
+import Header from '../components/Header';
 
 const beVietnam = Be_Vietnam_Pro({
 	subsets: ['latin'],
@@ -23,8 +24,11 @@ export default function RootLayout({
 	params: { lang: string };
 }) {
 	return (
-		<html lang={params.lang ?? defaultLocale}>
-			<body className={beVietnam.className}>{children}</body>
+		<html lang={params.lang ?? defaultLocale} id="app">
+			<body className={beVietnam.className}>
+				<Header lang={params.lang ?? defaultLocale} />
+				{children}
+			</body>
 		</html>
 	);
 }

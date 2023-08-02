@@ -29,7 +29,9 @@
 	}
 }
 
-body {
+html,
+body,
+:root {
 	color: rgb(var(--foreground-rgb));
 	background: var(--background);
 	width: 100%;

@@ -102,9 +102,6 @@
 }
 
 /* container */
-.container {
-	@apply !w-full !px-[.75rem] mx-auto xl:!max-w-[1180px] lg:!max-w-[992px] md:!max-w-[720px] sm:!max-w-[576px];
-}
 
 /* Buttons */
 .btn,
