@@ -1,0 +1,28 @@
+/* Định nghĩa animation */
+@keyframes shadow-pulse {
+	0% {
+		filter: drop-shadow(0 0 2em #4150f2);
+	}
+	50% {
+		filter: drop-shadow(0 0 6em #2b3eff);
+	}
+	100% {
+		filter: drop-shadow(0 0 2em #4150f2);
+	}
+}
+
+/* Áp dụng animation vào hình ảnh */
+.shadow-animation {
+	animation: shadow-pulse 3s infinite;
+	filter: drop-shadow(0 0 2em #2b3eff);
+	/* opacity: 0.5; */
+	/* filter: blur(76.32132720947266px); */
+}
+
+.scale-hover {
+  transition: transform 0.3s ease;
+}
+
+.scale-hover:hover {
+  transform: scale(1.2);
+}

@@ -26,6 +26,16 @@ export default function RootLayout({
 	return (
 		<html lang={params.lang ?? defaultLocale} id="app">
 			<body className={beVietnam.className}>
+				<video
+					preload="false"
+					autoPlay
+					loop
+					muted
+					playsInline
+					className="video-hero"
+				>
+					<source src="./assets/videos/hero.webm" type="video/webm" />
+				</video>
 				<Header lang={params.lang ?? defaultLocale} />
 				{children}
 			</body>

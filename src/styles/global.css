@@ -1,5 +1,6 @@
 /* Additional styles */
 @import './utility-patterns.css';
+@import './animation.css';
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +9,7 @@
 :root {
 	--foreground-rgb: 255, 255, 255;
 	--foreground-rgb: 0, 0, 0;
-	--background: #161616;
+	--background: #05092d;
 	--primary: #242f9e;
 	--secondary: #242f9e;
 	--grey: #666666;
@@ -36,7 +37,45 @@ body,
 	background: var(--background);
 	width: 100%;
 	min-height: 100%;
-	position: fixed;
+	position: sticky;
 	box-sizing: border-box;
 	line-height: 1.6;
+}
+
+.video-hero {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	object-fit: cover;
+	width: 100%;
+	height: 100vh ;
+	overflow: hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+	.video-hero {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	.video-hero {
+		width: auto;
+		height: 100vh;
+	}
+}
+
+.text-stroke:hover {
+	-webkit-text-stroke: 2px var(--white);
+	transition: all 0.3s ease-in-out;
+}
+
+.glass {
+	background: linear-gradient(rgba(255, 255, 255, 0.1), #05092d);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: transparent;
+	/* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
 }

@@ -1,46 +1,46 @@
 /* Typography */
 .big-text-1 {
-	@apply text-[96px] leading-[7.2rem] tracking-[0.96px];
+	@apply text-[96px] leading-[120%] tracking-[0.96px];
 }
 
 .big-text-2 {
-	@apply text-[72px] leading-[5.4rem] tracking-[1.44px];
+	@apply text-[72px] leading-[120%] tracking-[1.44px];
 }
 
 .h1 {
-	@apply text-[64px] leading-[4.8rem] tracking-[1.28px];
+	@apply text-[64px] leading-[120%] tracking-[1.28px];
 }
 
 .h2 {
-	@apply text-[48px] leading-[3.6rem] tracking-[0.96px];
+	@apply text-[48px] leading-[120%] tracking-[0.96px];
 }
 
 .h3 {
-	@apply text-[40px] leading-[3rem] tracking-[0.8px];
+	@apply text-[40px] leading-[120%] tracking-[0.8px];
 }
 
 .title {
-	@apply text-[32px] leading-[2.4rem] tracking-[0.64px];
+	@apply text-[32px] leading-[120%] tracking-[0.64px];
 }
 
 .subtitle-1 {
-	@apply text-[24px] leading-[1.8rem] tracking-[0.48px];
+	@apply text-[24px] leading-[120%] tracking-[0.48px];
 }
 
 .subtitle-2 {
-	@apply text-[20px] leading-[1.5rem] tracking-[0.4px];
+	@apply text-[20px] leading-[120%] tracking-[0.4px];
 }
 
 .body-text-1 {
-	@apply text-[16px] leading-[1.2rem] tracking-[0.32px];
+	@apply text-[16px] leading-[120%] tracking-[0.32px];
 }
 
 .body-text-2 {
-	@apply text-[14px] leading-[1.05rem] tracking-[0.28px];
+	@apply text-[14px] leading-[120%] tracking-[0.28px];
 }
 
 .caption-text {
-	@apply text-[13px] leading-[0.975rem] tracking-[0.26px];
+	@apply text-[13px] leading-[120%] tracking-[0.26px];
 }
 
 .regular {
@@ -55,49 +55,95 @@
 	@apply font-bold;
 }
 
-@media (max-width: 768px) {
-	.big-text-1 {
-		@apply tracking-[0.64px];
+@media (max-width: 1024px) {
+	.big-title-1 {
+		@apply text-[64px] tracking-[0.64px];
 	}
 
-	.big-text-2 {
-		@apply tracking-[1.12px];
+	.big-title-2 {
+		@apply text-[56px] tracking-[1.12px];
 	}
 
 	.h1 {
-		@apply tracking-[0.96px];
+		@apply text-[40px] tracking-[0.4px];
 	}
 
 	.h2 {
-		@apply tracking-[0.8px];
+		@apply text-[32px] tracking-[0.64px];
 	}
 
 	.h3 {
-		@apply tracking-[0.64px];
+		@apply text-[26px] tracking-[0.52px];
 	}
 
 	.title {
-		@apply tracking-[0.52px];
+		@apply text-[24px] tracking-[0.48px];
 	}
 
 	.subtitle-1 {
-		@apply tracking-[0.4px];
+		@apply text-[18px] tracking-[0.36px];
 	}
 
 	.subtitle-2 {
-		@apply tracking-[0.32px];
+		@apply text-[16px] tracking-[0.32px];
 	}
 
 	.body-text-1 {
-		@apply tracking-[0.32px];
+		@apply text-[16px] tracking-[0.32px];
 	}
 
 	.body-text-2 {
-		@apply tracking-[0.28px];
+		@apply text-[16px] tracking-[0.28px];
 	}
 
 	.caption-text {
-		@apply text-[13px] leading-[0.975rem] tracking-[0.26px];
+		@apply text-[13px] tracking-[0.26px];
+	}
+}
+
+@media (max-width: 600px) {
+	.big-title-1 {
+		@apply text-[64px] tracking-[0.64px];
+	}
+
+	.big-title-2 {
+		@apply text-[40px] tracking-[0.8px];
+	}
+
+	.h1 {
+		@apply text-[32px] tracking-[0.64px];
+	}
+
+	.h2 {
+		@apply text-[24px] tracking-[0.4px];
+	}
+
+	.h3 {
+		@apply text-[20px] tracking-[0.36px];
+	}
+
+	.title {
+		@apply text-[18px] tracking-[0.36px];
+	}
+
+	.subtitle-1 {
+		@apply text-[17px] tracking-[0.34px];
+	}
+
+	.subtitle-2 {
+		@apply text-[16px] tracking-[0.32px];
+	}
+
+	.body-text-1 {
+		@apply text-[14px] tracking-[0.28px];
+	}
+
+	.body-text-2 {
+		@apply text-[13px] tracking-[0.26px];
+	}
+
+	.caption-text {
+		@apply text-[11px] tracking-[0.22px];
 	}
 }
 

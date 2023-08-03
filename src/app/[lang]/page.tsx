@@ -1,10 +1,11 @@
-import Container from '@/components/Container';
-import { common } from '@public/locales/common';
+import Hero from './components/Hero';
+import WhyChooseUs from './components/WhyChooseUs';
 
 export default function Homepage({ params }: { params: { lang: string } }) {
 	return (
-		<Container>
-			<main className="big-text-1">{common[params.lang]?.hello}</main>
-		</Container>
+		<main>
+			<Hero lang={params.lang} />
+			<WhyChooseUs lang={params.lang} />
+		</main>
 	);
 }
