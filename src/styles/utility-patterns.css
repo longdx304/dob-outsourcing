@@ -56,11 +56,11 @@
 }
 
 @media (max-width: 1024px) {
-	.big-title-1 {
+	.big-text-1 {
 		@apply text-[64px] tracking-[0.64px];
 	}
 
-	.big-title-2 {
+	.big-text-2 {
 		@apply text-[56px] tracking-[1.12px];
 	}
 
@@ -102,11 +102,11 @@
 }
 
 @media (max-width: 600px) {
-	.big-title-1 {
+	.big-text-1 {
 		@apply text-[64px] tracking-[0.64px];
 	}
 
-	.big-title-2 {
+	.big-text-2 {
 		@apply text-[40px] tracking-[0.8px];
 	}
 
