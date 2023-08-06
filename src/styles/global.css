@@ -40,6 +40,7 @@ body,
 	position: sticky;
 	box-sizing: border-box;
 	line-height: 1.6;
+	overflow-x: hidden;
 }
 
 .video-hero {

@@ -2,6 +2,8 @@ import { FC } from 'react';
 import { IMenuData } from './Content';
 import ArrowDown from '@public/assets/icon/ArrowDown';
 import Select from '@/components/Select';
+import { motion } from 'framer-motion';
+import { fadeInUpLoop } from '@/lib/animation';
 
 interface IMenuProps {
 	data: IMenuData[];
@@ -12,9 +14,15 @@ const MenuItem: FC<IMenuProps> = ({ data, active, setActive }) => {
 	return (
 		<>
 			{/* UI Desktop */}
-			<article className="desktop:flex mobile:hidden py-12 items-center justify-between relative">
+			<motion.article
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.15 }}
+				className="desktop:flex mobile:hidden py-12 items-center justify-between relative"
+			>
 				{data.map((item, index) => (
-					<div
+					<motion.div
+						variants={fadeInUpLoop}
 						key={index}
 						onClick={() => setActive(item.key)}
 						className="flex items-center justify-center h-[125px] gap-8 w-1/6 
@@ -50,9 +58,9 @@ const MenuItem: FC<IMenuProps> = ({ data, active, setActive }) => {
 								}`}
 							/>
 						</div>
-					</div>
+					</motion.div>
 				))}
-			</article>
+			</motion.article>
 			{/* UI Mobile & Tablet */}
 			<article className="desktop:hidden mobile:block py-12 relative mx-auto max-w-[300px]">
 				<Select

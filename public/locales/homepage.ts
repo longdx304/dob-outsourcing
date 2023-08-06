@@ -1,6 +1,7 @@
 export const homepage: Record<string, any> = {
 	en: {
 		btnExplora: 'Explora',
+		dobTech: 'DOB TECH',
 		hero: {
 			title: 'Advanced infrastructure and technology',
 			subtitle: 'Reasonable labor cost',
@@ -66,6 +67,32 @@ export const homepage: Record<string, any> = {
 			logistics: 'Logistics',
 			supplyChain: 'Supply Chain',
 			ecommerce: 'Ecommerce',
+		},
+		weOnGlobal: {
+			title: 'We are on global',
+			subtitle: 'TO GET CLOSER TO OUR CUSTOMERS',
+			description:
+				'Take your company to new heights by investing in our reliable and efficient technology solutions.',
+			dobTechDes: 'We will deliver excellent results for you',
+			titleTech1: '4+',
+			titleTech2: '20+',
+			titleTech3: '5+',
+			descriptionTech1: 'We have been operating in this field for over 4 years',
+			descriptionTech2: 'We have successfully completed over 20 projects',
+			descriptionTech3: 'We have executed projects in 5 countries',
+		},
+		feedBack: {
+			title: 'Feedback',
+			subtitle: 'WHAT OUR CUSTOMERS SAY',
+			description:
+				'Read what our clients have to say about the services we provide at DOB TECH',
+		},
+		privacyPolicy: {
+			title_1: 'Privacy',
+			title_2: 'Policy',
+			description:
+				'DOB TECH ensures data security through a range of physical and electronic safeguards, including firewalls and data encryption, in accordance with information security regulations. This commitment to data protection is a top priority for DOB TECH',
+			btnContact: 'Contact',
 		},
 	},
 	vi: {

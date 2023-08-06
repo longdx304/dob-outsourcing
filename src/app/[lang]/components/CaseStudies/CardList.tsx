@@ -2,6 +2,8 @@ import { Button } from '@/components/ui/button';
 import IconTopLeft from '@public/assets/icon/IconTopLeft';
 import Image from 'next/image';
 import { FC } from 'react';
+import { motion } from 'framer-motion';
+import { flipInY } from '@/lib/animation';
 
 interface ICardListProps {
 	data: any;
@@ -9,7 +11,13 @@ interface ICardListProps {
 }
 const CardList: FC<ICardListProps> = ({ data, lang }) => {
 	return (
-		<article className="w-full py-4px flex justify-center items-center flex-wrap gap-8">
+		<motion.article
+			initial="hidden"
+			whileInView="visible"
+			variants={flipInY}
+			transition={{ staggerChildren: 0.25 }}
+			className="w-full py-4px flex justify-center items-center flex-wrap gap-8"
+		>
 			{data.map((item: any) => (
 				<div
 					key={item.key}
@@ -31,13 +39,13 @@ const CardList: FC<ICardListProps> = ({ data, lang }) => {
 						<p className="h3 bold text-light opacity-70 group-hover:opacity-100 ">
 							{item.title}
 						</p>
-						<div className="pt-4 overflow-hidden max-h-0 group-hover:max-h-[250px] transition-[max-height] duration-300">
-							<p className="body-text-1 regular opacity-0 translate-x-1/2 group-hover:!translate-x-0 group-hover:opacity-100 transition-all ease-out duration-300">
+						<div className="pt-4 overflow-hidden max-h-0 group-hover:max-h-[250px] transition-[max-height] duration-500">
+							<p className="body-text-1 regular opacity-0 translate-x-1/2 group-hover:!translate-x-0 group-hover:opacity-100 transition-all ease-out duration-500 delay-300">
 								{item.description}
 							</p>
 							<Button
 								className="body-text-1 regular opacity-0 translate-x-1/2 flex my-5 gap-2 h-[2.5rem]
-									group-hover:!translate-x-0 group-hover:opacity-100 transition-all ease-out duration-300
+									group-hover:!translate-x-0 group-hover:opacity-100 transition-all ease-out duration-500 delay-300
 								"
 							>
 								<span>{'View the project'}</span>
@@ -47,7 +55,7 @@ const CardList: FC<ICardListProps> = ({ data, lang }) => {
 					</div>
 				</div>
 			))}
-		</article>
+		</motion.article>
 	);
 };
 

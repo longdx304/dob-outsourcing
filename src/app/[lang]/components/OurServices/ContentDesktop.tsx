@@ -2,7 +2,7 @@
 
 import { useRef, useState, FC, useMemo } from 'react';
 import { ILanguageProps } from '@/lib/types';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -17,6 +17,8 @@ import ArrowLeft from '@public/assets/icon/ArrowRight';
 import ArrowRight from '@public/assets/icon/ArrowLeft';
 import { homepage } from '@public/locales/homepage';
 import { serviceData } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import { fadeInUp, flipInY } from '@/lib/animation';
 
 const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 	const swiperRef = useRef();
@@ -36,8 +38,15 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 	const dataService = useMemo(() => serviceData(lang), [lang]);
 
 	return (
-		<article className="relative">
+		<motion.article
+			initial="hidden"
+			whileInView="visible"
+			variants={flipInY}
+			transition={{ staggerChildren: 0.25 }}
+			className="relative"
+		>
 			<section className="h-[460px] w-full relative mt-16 overflow-hidden border-b-4 border-secondary">
+				{/* Show background image */}
 				<div className="absolute top-0 left-0 z-[-1] !w-[100vw] h-full">
 					{dataService.map((item, index) => (
 						<Image
@@ -57,6 +66,7 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 						/>
 					))}
 				</div>
+				{/* Show item service */}
 				<Swiper
 					slidesPerView={4}
 					pagination={{
@@ -78,6 +88,7 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 							onMouseMove={() => setActive(index)}
 						>
 							<div className="px-[26px] py-[24px] w-full h-full flex flex-col justify-end gap-2 bg-gradient-service translate-y-0 transition-transform duration-300 delay-700">
+								{/* Show title & index */}
 								<div
 									className={`
 								subtitle-1 bold text-light text-start flex gap-4 justify-start items-center
@@ -87,6 +98,7 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 									<span className="h3 text-secondary">{item.index}</span>
 									<span>{item.title}</span>
 								</div>
+								{/* Show description & button */}
 								<div
 									className={`
 								overflow-hidden duration-300 max-h-0
@@ -125,15 +137,19 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 					))}
 				</Swiper>
 			</section>
-			<div className="my-12 flex justify-center gap-4">
+			{/* Show Button Prev & Next Slider */}
+			<motion.div
+				variants={fadeInUp}
+				className="my-12 flex justify-center gap-4"
+			>
 				<Button className="bg-white" size="roundedFull" onClick={handlePrev}>
 					<ArrowLeft />
 				</Button>
 				<Button size="roundedFull" onClick={handleNext}>
 					<ArrowRight />
 				</Button>
-			</div>
-		</article>
+			</motion.div>
+		</motion.article>
 	);
 };
 
