@@ -16,7 +16,7 @@ const Hero: FC<ILanguageProps> = ({ lang }) => {
 				initial="hidden"
 				whileInView="visible"
 				variants={fadeInUp}
-				className="flex flex-col justify-center gap-8"
+				className="flex flex-col justify-start mt-32 gap-8"
 			>
 				<p className="h1 bold text-center text-stroke hover:text-transparent hover:cursor-pointer">
 					{homepage[lang].hero.title}
