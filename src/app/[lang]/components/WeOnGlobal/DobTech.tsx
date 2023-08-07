@@ -14,12 +14,16 @@ const DobTech: FC<ILanguageProps> = ({ lang }) => {
 			transition={{ staggerChildren: 0.5 }}
 		>
 			<Container className="relative desktop:h-[700px] mobile:h-[400px]">
-				<motion.div variants={fadeInUpLoop} className="w-full">
+				<motion.div
+					variants={fadeInUpLoop}
+					className="w-full h-full absolute top-0 z-1"
+				>
 					<Image
 						src="/assets/images/we-on-global/Pattern.png"
 						fill={true}
 						alt="pattern"
-						className="absolute z-[-1] w-full h-full animation-rotate object-cover"
+						sizes="(max-width: 768px) 100vw, 768px"
+						className="z-[-1] w-full h-full animation-rotate object-cover"
 					/>
 				</motion.div>
 				<motion.div

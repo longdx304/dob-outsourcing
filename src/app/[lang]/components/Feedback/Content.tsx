@@ -138,6 +138,7 @@ const Content: FC = () => {
 								src="/assets/images/feedback/default.png"
 								alt={item.id.toString()}
 								fill={true}
+								sizes="100px"
 								className="!relative bg-primary !w-[60px] !h-[60px] rounded-full"
 							/>
 							{/* Show Name & Position */}

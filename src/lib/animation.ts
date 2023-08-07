@@ -8,6 +8,7 @@ export const fadeInUp = {
 		y: 0,
 		transition: {
 			duration: 0.5,
+			delay: 0.5,
 		},
 	},
 };
@@ -22,6 +23,7 @@ export const fadeInRight = {
 		x: 0,
 		transition: {
 			duration: 0.5,
+			delay: 0.5,
 		},
 	},
 };
@@ -35,6 +37,7 @@ export const fadeInLeft = {
 		x: 0,
 		transition: {
 			duration: 0.5,
+			delay: 0.5,
 		},
 	},
 };
@@ -48,7 +51,7 @@ export const flipInY = {
 		opacity: 1,
 		scaleY: 1,
 		transition: {
-			delay: 0.25,
+			delay: 0.5,
 			duration: 0.5,
 		},
 	},
@@ -62,7 +65,7 @@ export const flipInX = {
 		opacity: 1,
 		scaleX: 1,
 		transition: {
-			delay: 0.25,
+			delay: 0.5,
 			duration: 0.5,
 		},
 	},
