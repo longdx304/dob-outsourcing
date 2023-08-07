@@ -122,10 +122,10 @@ const Content: FC = () => {
 					1024: {
 						slidesPerView: 3,
 					},
-					768: {
+					500: {
 						slidesPerView: 2,
 					},
-					425: {
+					300: {
 						slidesPerView: 1,
 					},
 				}}
