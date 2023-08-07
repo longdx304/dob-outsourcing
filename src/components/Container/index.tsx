@@ -4,8 +4,9 @@ import { FC } from 'react';
 interface IContainerProps {
 	children: React.ReactNode;
 	className?: string;
+	id?: string;
 }
-const Container: FC<IContainerProps> = ({ className, children }) => {
+const Container: FC<IContainerProps> = ({ id, className, children }) => {
 	return (
 		<article
 			className={cn(
@@ -17,6 +18,7 @@ const Container: FC<IContainerProps> = ({ className, children }) => {
 				`,
 				className
 			)}
+			id={id}
 		>
 			{children}
 		</article>

@@ -12,7 +12,7 @@ export const serviceData = (lang: string) => [
 		title: homepage[lang]?.our_services?.mobileAppDevelopment?.title,
 		description:
 			homepage[lang]?.our_services?.mobileAppDevelopment?.description,
-		image: '/assets/images/our-services/mobile-app-development1.png'
+		image: '/assets/images/our-services/mobile-app-development1.png',
 	},
 	{
 		index: '02',
@@ -43,7 +43,7 @@ export const serviceData = (lang: string) => [
 		title: homepage[lang]?.our_services?.customSoftwareDevelopment?.title,
 		description:
 			homepage[lang]?.our_services?.customSoftwareDevelopment?.description,
-		image: '/assets/images/our-services/custom-software-development.png',
+		image: '/assets/images/our-services/custom-software-development1.png',
 	},
 	{
 		index: '07',
@@ -52,3 +52,18 @@ export const serviceData = (lang: string) => [
 		image: '/assets/images/our-services/ai-solution.png',
 	},
 ];
+
+export const handleScrollToElement = (
+	e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+) => {
+	// first prevent the default behavior
+	e.preventDefault();
+	// get the href and remove everything before the hash (#)
+	const href = e.currentTarget.href;
+	const targetId = href.replace(/.*\#/, '');
+	// get the element by id and use scrollIntoView
+	const elem = document.getElementById(targetId);
+	elem?.scrollIntoView({
+		behavior: 'smooth',
+	});
+};

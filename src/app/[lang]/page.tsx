@@ -5,6 +5,7 @@ import CaseStudies from './components/CaseStudies';
 import WeOnGlobal from './components/WeOnGlobal';
 import Feedback from './components/Feedback';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import BackToTop from './components/BackToTop';
 
 export default function Homepage({ params }: { params: { lang: string } }) {
 	return (
@@ -16,6 +17,7 @@ export default function Homepage({ params }: { params: { lang: string } }) {
 			<WeOnGlobal lang={params.lang} />
 			<Feedback lang={params.lang} />
 			<PrivacyPolicy lang={params.lang} />
+			<BackToTop />
 		</main>
 	);
 }

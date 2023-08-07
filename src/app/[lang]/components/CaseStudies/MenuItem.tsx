@@ -53,7 +53,7 @@ const MenuItem: FC<IMenuProps> = ({ data, active, setActive }) => {
 								{item.value}
 							</div>
 							<ArrowDown
-								className={`transition-all duration-300 ${
+								className={`transition-all duration-300 stroke-primary ${
 									active === item.key ? 'opacity-1' : 'opacity-0'
 								}`}
 							/>

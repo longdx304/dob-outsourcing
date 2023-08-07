@@ -59,8 +59,8 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 							 transition-transform duration-300 aspect-none object-cover
 							${
 								active === index
-									? 'opacity-100 scale-[1] translate-x-0 transition-transform duration-300'
-									: 'scale-[1.1] translate-x-[-50px] opacity-0'
+									? 'opacity-100 scale-[1] translate-x-0 transition-transform duration-500'
+									: 'scale-[2] translate-x-[-50px] opacity-0'
 							}`}
 						/>
 					))}

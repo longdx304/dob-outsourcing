@@ -148,3 +148,58 @@ body,
 	z-index: 1;
 	pointer-events: none;
 }
+
+/* back to top */
+.btn-back-to-top {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(#6635c2, #050856);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+	bottom: 50px;
+	right: 30px;
+  cursor: pointer;
+  position: fixed;
+  border: none;
+	z-index: 1000;
+}
+
+.arrow path {
+  fill: white;
+}
+
+.text {
+  font-size: 0.7em;
+  width: 100px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -18px;
+  opacity: 0;
+  transition-duration: .7s;
+}
+
+.btn-back-to-top:hover .text {
+  opacity: 1;
+  transition-duration: .7s;
+}
+
+.btn-back-to-top:hover .arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
