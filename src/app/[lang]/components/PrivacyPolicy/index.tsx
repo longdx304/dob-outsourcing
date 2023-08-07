@@ -39,7 +39,7 @@ const PrivacyPolicy: FC<ILanguageProps> = ({ lang }) => {
 						fill={true}
 						src="/assets/images/privacy-policy/Background.png"
 						alt="privacy-policy-background"
-						sizes="(max-width: 768px) 100vw, 768px"
+						sizes="100vw"
 						className="object-contain absolute top-0 left-0 z-0"
 					/>
 					<Image

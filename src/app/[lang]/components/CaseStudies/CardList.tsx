@@ -29,7 +29,7 @@ const CardList: FC<ICardListProps> = ({ data, lang }) => {
 						src={item.image}
 						alt={item.title}
 						fill={true}
-						sizes="(max-width: 768px) 100vw, 768px"
+						sizes="100vw"
 						className="w-full h-full z-[-1] object-contain"
 					/>
 					<div

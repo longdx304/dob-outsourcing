@@ -50,7 +50,7 @@ const WhyChooseUs: FC<ILanguageProps> = ({ lang }) => {
 						src="/assets/images/why-choose-us/why-choose-us.png"
 						alt="why-choose-us"
 						fill={true}
-						sizes="100px"
+						sizes="100vw"
 						className="!relative shadow-animation hover:cursor-pointer !h-auto !w-full flex flex-col justify-center items-center top-"
 						// shadow-animation transition hover:scale-105
 					/>

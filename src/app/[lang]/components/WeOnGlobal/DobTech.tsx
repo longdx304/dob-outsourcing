@@ -22,7 +22,7 @@ const DobTech: FC<ILanguageProps> = ({ lang }) => {
 						src="/assets/images/we-on-global/Pattern.png"
 						fill={true}
 						alt="pattern"
-						sizes="(max-width: 768px) 100vw, 768px"
+						sizes="100vw"
 						className="z-[-1] w-full h-full animation-rotate object-cover"
 					/>
 				</motion.div>
