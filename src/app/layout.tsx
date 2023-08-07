@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Be_Vietnam_Pro } from 'next/font/google';
 import Header from '../components/Header';
 import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop/BackToTop';
 
 const beVietnam = Be_Vietnam_Pro({
 	subsets: ['latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({
 				</video>
 				<Header lang={params.lang ?? defaultLocale} />
 				{children}
+				<BackToTop />
 				<Footer lang={params.lang ?? defaultLocale} />
 			</body>
 		</html>

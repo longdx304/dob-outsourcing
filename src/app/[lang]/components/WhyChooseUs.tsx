@@ -14,7 +14,8 @@ const WhyChooseUs: FC<ILanguageProps> = ({ lang }) => {
 		<motion.div
 			initial="hidden"
 			whileInView="visible"
-			className="relative dash mobile:mt-10"
+			className="relative dash mobile:mt-10 scroll-mt-20"
+			id='why-choose-us'
 		>
 			<Container className="flex desktop:h-[600px] mobile:h-[370px] justify-between items-center gap-4">
 				{/* Show Content Left */}

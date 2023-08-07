@@ -8,6 +8,8 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInLeft, fadeInRight } from '@/lib/animation';
+import Link from 'next/link';
+import { handleScrollToElement } from '@/lib/utils';
 
 const PrivacyPolicy: FC<ILanguageProps> = ({ lang }) => {
 	return (
@@ -26,10 +28,12 @@ const PrivacyPolicy: FC<ILanguageProps> = ({ lang }) => {
 						</span>
 					</div>
 					<p>{homepage[lang]?.privacyPolicy?.description}</p>
-					<Button className="body-text-1 regular text-start h-[2.5rem] mt-4">
-						<span>{homepage[lang]?.privacyPolicy?.btnContact}</span>
-						<IconTopLeft />
-					</Button>
+					<Link href="#contact" onClick={handleScrollToElement}>
+						<Button className="body-text-1 regular text-start h-[2.5rem] mt-4">
+							<span>{homepage[lang]?.privacyPolicy?.btnContact}</span>
+							<IconTopLeft />
+						</Button>
+					</Link>
 				</motion.section>
 				<motion.section
 					variants={fadeInLeft}

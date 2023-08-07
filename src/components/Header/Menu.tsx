@@ -5,6 +5,8 @@ import {
 	NavigationMenuList,
 	NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
+import Link from 'next/link';
+import { handleScrollToElement } from '@/lib/utils';
 
 const menuItems = [
 	{
@@ -19,10 +21,6 @@ const menuItems = [
 		key: 'industries',
 		title: 'Industries',
 	},
-	{
-		key: 'resources',
-		title: 'Resources',
-	},
 ];
 
 interface MenubarProps {
@@ -34,7 +32,11 @@ const Menubar: FC<MenubarProps> = ({ className }) => {
 			<NavigationMenuList>
 				{menuItems.map((item) => (
 					<NavigationMenuItem key={item.key}>
-						<NavigationMenuTrigger className='body-text-1 medium'>{item.title}</NavigationMenuTrigger>
+						<Link href={`/#${item.key}`} onClick={handleScrollToElement}>
+							<NavigationMenuTrigger className="body-text-1 medium">
+								{item.title}
+							</NavigationMenuTrigger>
+						</Link>
 						{/* <NavigationMenuContent>
 						</NavigationMenuContent> */}
 					</NavigationMenuItem>

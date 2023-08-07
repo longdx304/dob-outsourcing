@@ -6,7 +6,7 @@ import ContentMobile from './ContentMobile';
 
 const OurServices: FC<ILanguageProps> = ({ lang }) => {
 	return (
-		<article className="py-12">
+		<article className="py-12 scroll-mt-16" id="services">
 			<Header lang={lang} />
 			<div className="desktop:block mobile:hidden px-[20px]">
 				<ContentDesktop lang={lang} />
