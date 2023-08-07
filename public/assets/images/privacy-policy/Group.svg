@@ -140,7 +140,7 @@
 <path d="M61.1923 253.23C60.6257 252.664 59.6445 253.051 59.6445 253.838V258.661C59.6445 260.679 61.3581 262.351 63.4448 262.351C64.7576 262.365 66.5817 262.365 68.1433 262.365C68.931 262.365 69.3455 261.439 68.7928 260.886C66.8028 258.882 63.2375 255.275 61.1923 253.23Z" fill="#FFE092"/>
 <circle cx="327.35" cy="37.3616" r="4.97487" fill="#FF3434"/>
 <circle cx="148.992" cy="319.397" r="3.31658" fill="#00CBBF"/>
-<circle cx="5.08617" cy="115.301" r="3.31658" stroke="#FF00B8" stroke-width="2.21106"/>
+<circle cx="5.08617" cy="115.301" r="3.31658" stroke="#FF00B8" strokeWidth="2.21106"/>
 <defs>
 <radialGradient id="paint0_radial_740_152433" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(146.321 245.568) rotate(135) scale(13.506)">
 <stop stop-color="white"/>

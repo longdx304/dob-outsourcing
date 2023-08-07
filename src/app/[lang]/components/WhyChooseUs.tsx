@@ -11,9 +11,8 @@ import { fadeInLeft, fadeInRight } from '@/lib/animation';
 
 const WhyChooseUs: FC<ILanguageProps> = ({ lang }) => {
 	return (
-		<div className="relative">
-			<div className="absolute glass left-0 top-[-20px] w-[100vw] h-[50px] bg-white" />
-			<Container className="flex desktop:h-[600px] mobile:h-[370px] justify-between gap-4">
+		<div className="relative dash mobile:mt-10">
+			<Container className="flex desktop:h-[600px] mobile:h-[370px] justify-between items-center gap-4">
 				{/* Show Content Left */}
 				<motion.div
 					initial="hidden"
@@ -43,14 +42,13 @@ const WhyChooseUs: FC<ILanguageProps> = ({ lang }) => {
 					whileInView="visible"
 					// viewport={{ once: false }}
 					variants={fadeInLeft}
-					className="mobile:hidden desktop:block w-1/2 h-full"
+					className="mobile:hidden desktop:flex w-1/2 h-[100%] relative justify-center items-center"
 				>
 					<Image
-						width={530}
-						height={530}
-						src="/assets/images/why-choose-us.svg"
+						src="/assets/images/why-choose-us/why-choose-us.png"
 						alt="why-choose-us"
-						className=" hover:cursor-pointer h-full flex flex-col justify-center items-center"
+						fill={true}
+						className="!relative shadow-animation hover:cursor-pointer !h-auto !w-full flex flex-col justify-center items-center top-"
 						// shadow-animation transition hover:scale-105
 					/>
 				</motion.div>

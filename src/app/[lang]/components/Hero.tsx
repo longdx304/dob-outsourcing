@@ -3,20 +3,20 @@ import Container from '@/components/Container';
 import { Button } from '@/components/ui/button';
 import { ILanguageProps } from '@/lib/types';
 import { homepage } from '@public/locales/homepage';
-import { FC, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { FC } from 'react';
+import { motion } from 'framer-motion';
 import { fadeInUp } from '@/lib/animation';
 
 const Hero: FC<ILanguageProps> = ({ lang }) => {
 	return (
-		<Container className="h-[calc(100vh-104px)]">
+		<Container className="h-[calc(100vh-112px)]">
 			<motion.div
 				initial="hidden"
 				whileInView="visible"
 				variants={fadeInUp}
 				className="pt-16 flex flex-col justify-center gap-8"
 			>
-				<p className="h1 bold text-center text-stroke animation-text hover:text-transparent hover:cursor-pointer">
+				<p className="h1 bold text-center text-stroke hover:text-transparent hover:cursor-pointer">
 					{homepage[lang].hero.title}
 				</p>
 				<p className="h2 regular color-light text-center">

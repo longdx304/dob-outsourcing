@@ -11,7 +11,7 @@ const Fintech: FC = (props: IconMenuProps) => {
 			fill="none"
 			{...props}
 		>
-			<g clip-path="url(#clip0_617_25365)">
+			<g clipPath="url(#clip0_617_25365)">
 				<path
 					d="M16.1289 42.6348H25.1612V44.1509H16.1289V42.6348Z"
 					fill="white"

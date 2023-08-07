@@ -44,11 +44,10 @@ const ContentMobile: FC<ILanguageProps> = ({ lang }) => {
 							<Image
 								src={item.image}
 								alt={item.title}
-								layout="fill"
-								objectFit="cover"
+								fill={true}
 								loading="lazy"
 								quality={100}
-								className="w-full h-full"
+								className="w-full h-full object-cover"
 							/>
 						</div>
 					</CollapsibleContent>

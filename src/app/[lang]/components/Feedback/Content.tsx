@@ -115,15 +115,23 @@ const Content: FC = () => {
 				onBeforeInit={(swiper: any) => {
 					swiperRef.current = swiper;
 				}}
+				breakpoints={{
+					768: {
+						slidesPerView: 2,
+					},
+					425: {
+						slidesPerView: 1,
+					}
+				}}
 			>
 				{data.map((item) => (
 					<SwiperSlide key={item.id} className="!flex items-center">
-						<div className="p-10 mx-auto h-full bg-white rounded-[24px] flex flex-col justify-start items-start gap-4">
+						<div className="relative p-10 mx-auto h-full bg-white rounded-[24px] flex flex-col justify-start items-start gap-4">
 							{/* Show Avatar */}
 							<Image
-								src=""
+								src="/assets/images/feedback/default.png"
 								alt={item.id.toString()}
-								layout="fill"
+								fill={true}
 								className="!relative bg-primary !w-[60px] !h-[60px] rounded-full"
 							/>
 							{/* Show Name & Position */}

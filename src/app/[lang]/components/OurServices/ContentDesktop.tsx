@@ -53,11 +53,10 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 							key={item.index}
 							src={item.image}
 							alt={item.index}
-							layout="fill"
-							objectFit="cover"
+							fill={true}
 							loading="lazy"
 							className={`
-							 transition-transform duration-300 aspect-none
+							 transition-transform duration-300 aspect-none object-cover
 							${
 								active === index
 									? 'opacity-100 scale-[1] translate-x-0 transition-transform duration-300'

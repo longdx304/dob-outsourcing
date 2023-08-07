@@ -13,21 +13,20 @@ const DobTech: FC<ILanguageProps> = ({ lang }) => {
 			whileInView="visible"
 			transition={{ staggerChildren: 0.5 }}
 		>
-			<Container className="relative desktop:h-[700px]">
+			<Container className="relative desktop:h-[700px] mobile:h-[400px]">
 				<motion.div variants={fadeInUpLoop} className="w-full">
 					<Image
-						src="/assets/images/we-on-global/Pattern.svg"
-						layout="fill"
+						src="/assets/images/we-on-global/Pattern.png"
+						fill={true}
 						alt="pattern"
-						objectFit="cover"
-						className="absolute z-[-1] w-full h-full animation-rotate"
+						className="absolute z-[-1] w-full h-full animation-rotate object-cover"
 					/>
 				</motion.div>
 				<motion.div
 					variants={fadeInLeft}
 					className="flex flex-col justify-center items-center gap-8"
 				>
-					<p className="pt-24 h1 text-secondary medium">
+					<p className="desktop:pt-24 h1 text-secondary medium">
 						{homepage[lang]?.dobTech}
 					</p>
 					<p className="body-text-1 text-light bold">
@@ -36,9 +35,9 @@ const DobTech: FC<ILanguageProps> = ({ lang }) => {
 				</motion.div>
 				<motion.div
 					variants={fadeInRight}
-					className="flex justify-between items-center text-center pt-12"
+					className="flex desktop:flex-row mobile:flex-col desktop:gap-0 mobile:gap-8 justify-between items-center text-center pt-12"
 				>
-					<div className="w-[296px]">
+					<div className="desktop:desktop:w-[296px] mobile:w-full mobile:w-full">
 						<p className="h2 bold text-secondary">
 							{homepage[lang].weOnGlobal.titleTech1}
 						</p>
@@ -46,7 +45,7 @@ const DobTech: FC<ILanguageProps> = ({ lang }) => {
 							{homepage[lang].weOnGlobal.descriptionTech1}
 						</p>
 					</div>
-					<div className="w-[296px]">
+					<div className="desktop:w-[296px] mobile:w-full">
 						<p className="h2 bold text-secondary">
 							{homepage[lang].weOnGlobal.titleTech2}
 						</p>
@@ -54,7 +53,7 @@ const DobTech: FC<ILanguageProps> = ({ lang }) => {
 							{homepage[lang].weOnGlobal.descriptionTech2}
 						</p>
 					</div>
-					<div className="w-[296px]">
+					<div className="desktop:w-[296px] mobile:w-full">
 						<p className="h2 bold text-secondary">
 							{homepage[lang].weOnGlobal.titleTech3}
 						</p>

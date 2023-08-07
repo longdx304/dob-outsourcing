@@ -13,9 +13,9 @@ const IconAdd = (props: IconMenuProps) => {
 			<path
 				d="M32 14V50M50 32L14 32"
 				stroke="white"
-				stroke-width="4"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeWidth="4"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	);

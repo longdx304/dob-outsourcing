@@ -12,10 +12,10 @@ import { fadeInLeft, fadeInRight } from '@/lib/animation';
 const PrivacyPolicy: FC<ILanguageProps> = ({ lang }) => {
 	return (
 		<motion.div initial="hidden" whileInView="visible">
-			<Container className="flex justify-center gap-4 py-12">
+			<Container className="flex desktop:flex-row mobile:flex-col justify-center py-12 desktop:gap-4 mobile:gap-16">
 				<motion.section
 					variants={fadeInRight}
-					className="w-1/2 flex flex-col justify-center items-start gap-2"
+					className="desktop:w-1/2 mobile:w-full flex flex-col justify-center desktop:items-start mobile:items-center desktop:text-start mobile:text-center gap-2"
 				>
 					<div className="h2 bold flex justify-start gap-2">
 						<span className="text-light">
@@ -33,21 +33,25 @@ const PrivacyPolicy: FC<ILanguageProps> = ({ lang }) => {
 				</motion.section>
 				<motion.section
 					variants={fadeInLeft}
-					className="w-1/2 h-[600px] relative overflow-hidden"
+					className="desktop:w-1/2 mobile:w-full relative overflow-hidden h-[440px]"
 				>
 					<Image
-						layout="fill"
-						objectFit="none"
-						src="/assets/images/privacy-policy/Frame.svg"
-						alt="frame"
-						className="w-full h-full absolute top-0 left-0 z-0 shadow-animation heartbeat"
+						fill={true}
+						src="/assets/images/privacy-policy/Background.png"
+						alt="privacy-policy-background"
+						className="object-contain absolute top-0 left-0 z-0"
 					/>
 					<Image
-						layout="fill"
-						objectFit="none"
+						fill={true}
+						src="/assets/images/privacy-policy/Frame.svg"
+						alt="frame"
+						className="object-none w-full h-full absolute top-0 left-0 z-0 shadow-animation heartbeat"
+					/>
+					<Image
+						fill={true}
 						src="/assets/images/privacy-policy/Group.svg"
 						alt="group"
-						className="w-full h-full absolute top-0 left-0 z-1 animation-rotate"
+						className="object-none w-full h-full absolute top-0 left-0 z-1 animation-rotate"
 					/>
 				</motion.section>
 			</Container>
