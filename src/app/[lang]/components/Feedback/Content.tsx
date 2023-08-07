@@ -104,7 +104,7 @@ const Content: FC = () => {
 			className="pt-12 mx-5"
 		>
 			<Swiper
-				slidesPerView={4}
+				// slidesPerView={4}
 				effect={'coverflow'}
 				coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2 }}
 				grabCursor={true}
@@ -116,6 +116,12 @@ const Content: FC = () => {
 					swiperRef.current = swiper;
 				}}
 				breakpoints={{
+					1500: {
+						slidesPerView: 4,
+					},
+					1024: {
+						slidesPerView: 3,
+					},
 					768: {
 						slidesPerView: 2,
 					},

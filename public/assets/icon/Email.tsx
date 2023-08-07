@@ -11,7 +11,7 @@ const Email: FC = (props: IconMenuProps) => {
 			fill="none"
 			{...props}
 		>
-			<g clip-path="url(#clip0_831_833)">
+			<g clipPath="url(#clip0_831_833)">
 				<path
 					fillRule="evenodd"
 					clipRule="evenodd"
