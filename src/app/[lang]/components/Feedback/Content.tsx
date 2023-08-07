@@ -86,7 +86,7 @@ const data = [
 ];
 
 const Content: FC = () => {
-	const swiperRef = useRef();
+	const swiperRef = useRef<any>();
 
 	const handlePrev = () => {
 		swiperRef.current?.slidePrev();
@@ -121,7 +121,7 @@ const Content: FC = () => {
 					},
 					425: {
 						slidesPerView: 1,
-					}
+					},
 				}}
 			>
 				{data.map((item) => (

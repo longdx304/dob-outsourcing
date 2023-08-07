@@ -21,7 +21,7 @@ import { motion } from 'framer-motion';
 import { fadeInUp, flipInY } from '@/lib/animation';
 
 const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
-	const swiperRef = useRef();
+	const swiperRef = useRef<any>();
 	const [active, setActive] = useState<number>(1);
 
 	const handlePrev = () => {
