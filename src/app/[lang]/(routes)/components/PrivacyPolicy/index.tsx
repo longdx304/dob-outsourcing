@@ -1,5 +1,5 @@
 'use client';
-import Container from '@/components/Container';
+import Container from '@/components/Layout/Container';
 import { Button } from '@/components/ui/button';
 import { ILanguageProps } from '@/lib/types';
 import IconTopLeft from '@public/assets/icon/IconTopLeft';

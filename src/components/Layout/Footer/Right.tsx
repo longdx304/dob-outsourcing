@@ -3,10 +3,10 @@ import { ILanguageProps } from '@/lib/types';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInLeft } from '@/lib/animation';
-import { Input } from '../ui/input';
+import { Input } from '../../ui/input';
 import { footer } from '@public/locales/footer';
-import { Textarea } from '../ui/textarea';
-import { Button } from '../ui/button';
+import { Textarea } from '../../ui/textarea';
+import { Button } from '../../ui/button';
 
 const Right: FC<ILanguageProps> = ({ lang }) => {
 	return (

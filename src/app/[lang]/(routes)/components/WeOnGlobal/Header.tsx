@@ -1,9 +1,10 @@
-import Container from '@/components/Container';
+'use client';
+import Container from '@/components/Layout/Container';
 import { ILanguageProps } from '@/lib/types';
 import { homepage } from '@public/locales/homepage';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-import { flipInY } from '@/lib/animation';
+import { fadeInLeft, fadeInRight } from '@/lib/animation';
 
 const Header: FC<ILanguageProps> = ({ lang }) => {
 	return (
@@ -11,20 +12,23 @@ const Header: FC<ILanguageProps> = ({ lang }) => {
 			<motion.div
 				initial="hidden"
 				whileInView="visible"
-				variants={flipInY}
+				transition={{ staggerChildren: 0.25 }}
 				className="flex flex-col justify-center items-center gap-4"
 			>
-				<p className="title bold text-light">
-					{homepage[lang]?.feedBack?.title}
-				</p>
-				<div className="text-center desktop:px-40 mobile:px-5 flex flex-col gap-2">
+				<motion.p variants={fadeInLeft} className="title bold text-light">
+					{homepage[lang]?.weOnGlobal?.title}
+				</motion.p>
+				<motion.div
+					variants={fadeInRight}
+					className="text-center desktop:px-40 mobile:px-5 flex flex-col gap-2"
+				>
 					<p className="h2 bold text-secondary">
-						{homepage[lang]?.feedBack?.subtitle}
+						{homepage[lang]?.weOnGlobal?.subtitle}
 					</p>
 					<p className="body-text-1 regular text-light">
-						{homepage[lang]?.feedBack?.description}
+						{homepage[lang]?.weOnGlobal?.description}
 					</p>
-				</div>
+				</motion.div>
 			</motion.div>
 		</Container>
 	);
