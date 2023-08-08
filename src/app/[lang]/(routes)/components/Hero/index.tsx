@@ -28,7 +28,7 @@ const Hero: FC<ILanguageProps> = ({ lang }) => {
 				variants={fadeInUp}
 				className="flex flex-col justify-start mt-32 gap-8"
 			>
-				<p className="h1 bold text-center text-stroke hover:text-transparent hover:cursor-pointer">
+				<p className="h1 bold text-center hover:cursor-pointer">
 					{homepage[lang].hero.title}
 				</p>
 				<p className="h2 regular color-light text-center">
