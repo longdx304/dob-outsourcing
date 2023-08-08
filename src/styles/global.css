@@ -1,0 +1,205 @@
+/* Additional styles */
+@import './utility-patterns.css';
+@import './animation.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background: #05092d;
+	--primary: #242f9e;
+	--secondary: #242f9e;
+	--grey: #666666;
+	--white: #ffffff;
+	--dark: #22212d;
+	--light: #242f9e;
+	--error: #da1e11;
+	--success: #28b873;
+	--warning: #f9cf3a;
+	--info: #0c7eda;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+}
+
+html,
+body,
+:root {
+	color: rgb(var(--foreground-rgb));
+	background: var(--background);
+	width: 100%;
+	min-height: 100%;
+	position: sticky;
+	box-sizing: border-box;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+.video-hero {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	object-fit: cover;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+	.video-hero {
+		width: 100%;
+		height: 100vh;
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	.video-hero {
+		width: auto;
+		height: 100vh;
+	}
+}
+
+.text-stroke:hover {
+	-webkit-text-stroke: 2px var(--white);
+	transition: all 0.3s ease-in-out;
+}
+
+.glass {
+	background: linear-gradient(rgba(255, 255, 255, 0.1), #05092d);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: transparent;
+	/* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
+}
+
+/* Swiper */
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: transparent;
+
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	/* display: block; */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bg-gradient-service:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(transparent),
+		to(rgba(7, 23, 49, 0.8))
+	);
+	background-image: linear-gradient(
+		to bottom,
+		transparent 0,
+		rgba(7, 23, 49, 0.8) 100%
+	);
+	background-repeat: repeat-x;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.text-stroke-white {
+	-webkit-text-stroke: 2px var(--white);
+	transition: all 0.3s ease-in-out;
+}
+
+.dash::before {
+	content: '';
+	position: absolute;
+	top: -65px;
+	left: 0;
+	width: 100vw;
+	height: 50px;
+	background: linear-gradient(rgba(255, 255, 255, 0.1), #05092d);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: transparent;
+	z-index: 1;
+	pointer-events: none;
+}
+
+/* back to top */
+.btn-back-to-top {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(#6635c2, #050856);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+	bottom: 50px;
+	right: 30px;
+  cursor: pointer;
+  position: fixed;
+  border: none;
+	z-index: 1000;
+}
+
+.arrow path {
+  fill: white;
+}
+
+.text {
+  font-size: 0.7em;
+  width: 100px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -18px;
+  opacity: 0;
+  transition-duration: .7s;
+}
+
+.btn-back-to-top:hover .text {
+  opacity: 1;
+  transition-duration: .7s;
+}
+
+.btn-back-to-top:hover .arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

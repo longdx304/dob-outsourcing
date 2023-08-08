@@ -20,7 +20,6 @@ function getLocale(request: Request): string {
 export function middleware(request: NextRequest) {
 	let locale = getLocale(request) ?? defaultLocale;
 	const pathname = request.nextUrl.pathname;
-	console.log('pathname:', pathname, locale);
 
 	const newUrl = new URL(`/${locale}${pathname}`, request.nextUrl);
 

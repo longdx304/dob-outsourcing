@@ -1,0 +1,181 @@
+/* Định nghĩa animation */
+@keyframes shadow-pulse {
+	0% {
+		filter: drop-shadow(0 0 2em #4150f2);
+	}
+	50% {
+		filter: drop-shadow(0 0 6em #2b3eff);
+	}
+	100% {
+		filter: drop-shadow(0 0 2em #4150f2);
+	}
+}
+
+/* Áp dụng animation vào hình ảnh */
+.shadow-animation {
+	animation: shadow-pulse 3s infinite;
+	filter: drop-shadow(0 0 2em #2b3eff);
+	/* opacity: 0.5; */
+	/* filter: blur(76.32132720947266px); */
+}
+
+.scale-hover {
+	transition: transform 0.3s ease;
+}
+
+.scale-hover:hover {
+	transform: scale(1.2);
+}
+
+/* Heartbeat */
+@keyframes heartbeat {
+	0%,
+	100% {
+		transform: scale(1) rotateX(0deg); /* Tỷ lệ ban đầu */
+	}
+	50% {
+		transform: scale(1.1) rotateX(30deg); /* Tỷ lệ phóng to */
+	}
+}
+
+.heartbeat {
+	animation: heartbeat 2s infinite; /* Áp dụng animation và lặp vô hạn */
+}
+
+/* Rotate */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg); /* Góc ban đầu là 0 độ */
+	}
+	to {
+		transform: rotate(360deg); /* Góc quay là 360 độ (hoàn thành một vòng) */
+	}
+}
+
+.animation-rotate {
+	animation: rotate 15s linear infinite; /* Áp dụng animation và lặp vô hạn */
+}
+
+/* Text shine */
+.animation-shine {
+	text-align: center;
+	text-transform: uppercase;
+	background: linear-gradient(90deg, #000, #fff, #000);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	animation: shine 3s linear infinite;
+	position: relative;
+}
+
+@keyframes shine {
+	0% {
+		background-position-x: -500%;
+	}
+	100% {
+		background-position-x: 500%;
+	}
+}
+
+/* Text Glitch */
+.animation-text {
+	animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+	2%,
+	64% {
+		transform: translate(2px, 0) skew(0deg);
+	}
+	4%,
+	60% {
+		transform: translate(-2px, 0) skew(0deg);
+	}
+	62% {
+		transform: translate(0, 0) skew(5deg);
+	}
+}
+
+.animation-text:before,
+.animation-text:after {
+	content: attr(title);
+	position: absolute;
+	left: 0;
+}
+
+.animation-text:before {
+	animation: glitchTop 1s linear infinite;
+	clipPath: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+	-webkit-clipPath: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+	2%,
+	64% {
+		transform: translate(2px, -2px);
+	}
+	4%,
+	60% {
+		transform: translate(-2px, 2px);
+	}
+	62% {
+		transform: translate(13px, -1px) skew(-13deg);
+	}
+}
+
+.animation-text:after {
+	animation: glitchBotom 1.5s linear infinite;
+	clipPath: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+	-webkit-clipPath: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+	2%,
+	64% {
+		transform: translate(-2px, 0);
+	}
+	4%,
+	60% {
+		transform: translate(-2px, 0);
+	}
+	62% {
+		transform: translate(-22px, 5px) skew(21deg);
+	}
+}
+
+/* Text */
+.animation-text-2 {
+	/* display: none; */
+	color: transparent;
+	-webkit-text-stroke: 2px #fff;
+	position: relative;
+}
+
+.animation-text-2:before {
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 100%;
+	color: #fff;
+	-webkit-text-stroke: 0px #fff;
+	border-right: 2px solid #fff;
+	overflow: hidden;
+	animation: type 6s linear infinite;
+	text-align: center;
+}
+
+@keyframes type {
+	0%,
+	10%,
+	100% {
+		width: 0;
+	}
+	70%,
+	90% {
+		width: 100%;
+	}
+}

@@ -1,0 +1,181 @@
+/* Typography */
+.big-text-1 {
+	@apply text-[96px] leading-[120%] tracking-[0.96px];
+}
+
+.big-text-2 {
+	@apply text-[72px] leading-[120%] tracking-[1.44px];
+}
+
+.h1 {
+	@apply text-[64px] leading-[120%] tracking-[1.28px];
+}
+
+.h2 {
+	@apply text-[48px] leading-[120%] tracking-[0.96px];
+}
+
+.h3 {
+	@apply text-[40px] leading-[120%] tracking-[0.8px];
+}
+
+.title {
+	@apply text-[32px] leading-[120%] tracking-[0.64px];
+}
+
+.subtitle-1 {
+	@apply text-[24px] leading-[120%] tracking-[0.48px];
+}
+
+.subtitle-2 {
+	@apply text-[20px] leading-[120%] tracking-[0.4px];
+}
+
+.body-text-1 {
+	@apply text-[16px] leading-[120%] tracking-[0.32px];
+}
+
+.body-text-2 {
+	@apply text-[14px] leading-[120%] tracking-[0.28px];
+}
+
+.caption-text {
+	@apply text-[13px] leading-[120%] tracking-[0.26px];
+}
+
+.regular {
+	@apply font-normal;
+}
+
+.medium {
+	@apply font-medium;
+}
+
+.bold {
+	@apply font-bold;
+}
+
+@media (max-width: 1024px) {
+	.big-text-1 {
+		@apply text-[64px] tracking-[0.64px];
+	}
+
+	.big-text-2 {
+		@apply text-[56px] tracking-[1.12px];
+	}
+
+	.h1 {
+		@apply text-[40px] tracking-[0.4px];
+	}
+
+	.h2 {
+		@apply text-[32px] tracking-[0.64px];
+	}
+
+	.h3 {
+		@apply text-[26px] tracking-[0.52px];
+	}
+
+	.title {
+		@apply text-[24px] tracking-[0.48px];
+	}
+
+	.subtitle-1 {
+		@apply text-[18px] tracking-[0.36px];
+	}
+
+	.subtitle-2 {
+		@apply text-[16px] tracking-[0.32px];
+	}
+
+	.body-text-1 {
+		@apply text-[16px] tracking-[0.32px];
+	}
+
+	.body-text-2 {
+		@apply text-[16px] tracking-[0.28px];
+	}
+
+	.caption-text {
+		@apply text-[13px] tracking-[0.26px];
+	}
+}
+
+@media (max-width: 600px) {
+	.big-text-1 {
+		@apply text-[64px] tracking-[0.64px];
+	}
+
+	.big-text-2 {
+		@apply text-[40px] tracking-[0.8px];
+	}
+
+	.h1 {
+		@apply text-[32px] tracking-[0.64px];
+	}
+
+	.h2 {
+		@apply text-[24px] tracking-[0.4px];
+	}
+
+	.h3 {
+		@apply text-[20px] tracking-[0.36px];
+	}
+
+	.title {
+		@apply text-[18px] tracking-[0.36px];
+	}
+
+	.subtitle-1 {
+		@apply text-[17px] tracking-[0.34px];
+	}
+
+	.subtitle-2 {
+		@apply text-[16px] tracking-[0.32px];
+	}
+
+	.body-text-1 {
+		@apply text-[14px] tracking-[0.28px];
+	}
+
+	.body-text-2 {
+		@apply text-[13px] tracking-[0.26px];
+	}
+
+	.caption-text {
+		@apply text-[11px] tracking-[0.22px];
+	}
+}
+
+/* container */
+
+/* Buttons */
+.btn,
+.btn-sm {
+	@apply text-sm font-medium inline-flex items-center justify-center rounded-full leading-5 whitespace-nowrap transition duration-150 ease-in-out;
+}
+
+.btn {
+	@apply px-5 py-2.5;
+}
+
+.btn-sm {
+	@apply px-4 py-2;
+}
+
+/* gradient colors */
+.gradient-text {
+	@apply text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-indigo-300;
+}
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}

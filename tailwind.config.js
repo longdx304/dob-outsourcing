@@ -4,30 +4,23 @@ module.exports = {
 		'./pages/**/*.{js,ts,jsx,tsx,mdx}',
 		'./components/**/*.{js,ts,jsx,tsx,mdx}',
 		'./app/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/**/*.{ts,tsx}',
 	],
 	theme: {
-		container: {
-			center: true,
-			padding: '2rem',
-			// screens: {
-			// 	'2xl': { 'max': '1400px' },
-			// 	'md': { 'max': '768px' },
-			// 	'xs': { 'max': '429px' },
-			// },
-			screens: {
-				'desktop': { 'max': '1400px' },
-				'table': { 'max': '768px' },
-				'mobile': { 'max': '429px' },
-			}
+		screens: {
+			'desktop4k': '1536px',
+			'desktop': '1024px',
+			'tablet': '600px',
+			'mobile': '320px',
 		},
 		extend: {
 			colors: {
 				primary: '#242F9E',
-				secondary: '#242F9E',
+				secondary: '#5260EB',
 				grey: '#666666',
 				white: '#FFFFFF',
 				dark: '#22212D',
-				light: '#242F9E',
+				light: '#F7F7F7',
 				error: '#DA1E11',
 				success: '#28B873',
 				warning: '#F9CF3A',
@@ -49,5 +42,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
+	plugins: [require('tailwindcss-animate'), require('@tailwindcss/aspect-ratio'),],
 }
