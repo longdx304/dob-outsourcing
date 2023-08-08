@@ -2,13 +2,14 @@
 import { FC, useState } from 'react';
 import Container from '../Container';
 import { common } from '@public/locales/common';
-import Menubar from '@/components/Header/Menu';
-import { Button } from '../ui/button';
+import Menubar from '@/components/Layout/Header/Menu';
+import { Button } from '../../ui/button';
 import IconMenu from '@public/assets/icon/IconMenu';
 import Link from 'next/link';
 import { handleScrollToElement } from '@/lib/utils';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { fadeInLeft, fadeInRight } from '@/lib/animation';
+import { PATHS } from '@/lib/path';
 
 interface HeaderProps {
 	lang: string;
@@ -40,8 +41,11 @@ const Header: FC<HeaderProps> = ({ lang }) => {
 						isSticky ? 'py-3' : 'py-6'
 					}`}
 				>
-					<motion.span variants={fadeInRight} className="title regular">
-						{common[lang]?.dob_tech}
+					<motion.span
+						variants={fadeInRight}
+						className="title regular hover:cursor-pointer"
+					>
+						<Link href={PATHS.HOME}>{common[lang]?.dob_tech}</Link>
 					</motion.span>
 					<motion.div variants={fadeInLeft}>
 						<Menubar className="desktop:block mobile:hidden" />

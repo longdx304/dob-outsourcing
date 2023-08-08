@@ -1,5 +1,5 @@
 'use client';
-import Container from '@/components/Container';
+import Container from '@/components/Layout/Container';
 import { Button } from '@/components/ui/button';
 import { ILanguageProps } from '@/lib/types';
 import { homepage } from '@public/locales/homepage';
@@ -12,6 +12,16 @@ import { handleScrollToElement } from '@/lib/utils';
 const Hero: FC<ILanguageProps> = ({ lang }) => {
 	return (
 		<Container className="h-[100vh] flex justify-center" id="top">
+			<video
+				preload="false"
+				autoPlay
+				loop
+				muted
+				playsInline
+				className="video-hero"
+			>
+				<source src="./assets/videos/hero.webm" type="video/webm" />
+			</video>
 			<motion.div
 				initial="hidden"
 				whileInView="visible"

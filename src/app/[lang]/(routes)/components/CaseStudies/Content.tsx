@@ -1,5 +1,5 @@
 'use client';
-import Container from '@/components/Container';
+import Container from '@/components/Layout/Container';
 import { ILanguageProps } from '@/lib/types';
 import { FC, useState } from 'react';
 import MenuItem from './MenuItem';

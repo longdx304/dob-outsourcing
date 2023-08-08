@@ -7,7 +7,7 @@ import Right from './Right';
 
 const Footer: FC<ILanguageProps> = ({ lang }) => {
 	return (
-		<footer className="relative w-full h-full" id="contact">
+		<footer className="relative bottom-0 w-full h-full" id="contact">
 			<Image
 				src="/assets/images/layout/bg_footer.png"
 				alt="footer-bg"

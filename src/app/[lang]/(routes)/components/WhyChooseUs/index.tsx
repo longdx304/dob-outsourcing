@@ -1,5 +1,5 @@
 'use client';
-import Container from '@/components/Container';
+import Container from '@/components/Layout/Container';
 import { Button } from '@/components/ui/button';
 import { ILanguageProps } from '@/lib/types';
 import IconTopLeft from '@public/assets/icon/IconTopLeft';
@@ -8,6 +8,8 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInLeft, fadeInRight } from '@/lib/animation';
+import Link from 'next/link';
+import { PATHS } from '@/lib/path';
 
 const WhyChooseUs: FC<ILanguageProps> = ({ lang }) => {
 	return (
@@ -15,7 +17,7 @@ const WhyChooseUs: FC<ILanguageProps> = ({ lang }) => {
 			initial="hidden"
 			whileInView="visible"
 			className="relative dash mobile:mt-10 scroll-mt-20"
-			id='why-choose-us'
+			id="why-choose-us"
 		>
 			<Container className="flex desktop:h-[600px] mobile:h-[370px] justify-between items-center gap-4">
 				{/* Show Content Left */}
@@ -34,10 +36,12 @@ const WhyChooseUs: FC<ILanguageProps> = ({ lang }) => {
 							{homepage[lang].why_choose_us.description}
 						</p>
 					</div>
-					<Button className="flex justify-center gap-2 max-w-fit">
-						<span>{homepage[lang].why_choose_us.btn}</span>
-						<IconTopLeft />
-					</Button>
+					<Link href={PATHS.WHY_CHOOSE_US}>
+						<Button className="flex justify-center gap-2 max-w-fit">
+							<span>{homepage[lang].why_choose_us.btn}</span>
+							<IconTopLeft />
+						</Button>
+					</Link>
 				</motion.div>
 				{/* Show Content Right */}
 				<motion.div
