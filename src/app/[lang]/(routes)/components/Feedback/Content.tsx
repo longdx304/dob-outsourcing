@@ -15,73 +15,59 @@ import { flipInX } from '@/lib/animation';
 const data = [
 	{
 		id: 1,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
+		name: 'Ronald Richards',
+		position: 'CEO/Founder DynaVision Development',
 		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
+			"Dob Tech's software development expertise is impressive. Their team's dedication and clear communication led to a seamless process, delivering beyond expectations.",
+		image: '/assets/images/feedback/fb1.png',
 	},
 	{
 		id: 2,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
+		name: 'Gregory Hayes',
+		position: 'CEO/Founder Strat Security',
 		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
+			"NexGen Systems consistently delivers outstanding software solutions. Their team's technical prowess, under John's leadership, has significantly enhanced our IT infrastructure. Highly impressed.",
+		image: '/assets/images/feedback/fb2.png',
 	},
 	{
 		id: 3,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
+		name: 'Yeung Jun Ming',
+		position: 'CEO/Founder TechMaster Solutions',
 		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
+			'We chose DOB Tech to develop a complex and responsive e-commerce website. The entire process of working with DOB Tech was smooth and efficient. meet new challenges. ',
+		image: '/assets/images/feedback/fb3.png',
 	},
 	{
 		id: 4,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
+		name: 'Ralph Edwards',
+		position: 'CEO/Founder DynaVision Development',
 		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
+			'DOB Tech is an outstanding software development company. Their expertise, communication, and dedication to quality are impressive. ',
+		image: '/assets/images/feedback/fb4.png',
 	},
 	{
 		id: 5,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
+		name: 'Savannah Nguyen',
+		position: 'CEO/Founder DynaVision Development',
 		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
+			"SynthoTech Solutions has redefined our project's success. Their development excellence, guided by John's expertise, brought our vision to life. Incredibly satisfied with the outcome.",
+		image: '/assets/images/feedback/fb5.png',
 	},
 	{
 		id: 6,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
+		name: 'Ryan Mitchell',
+		position: 'CEO/Founder NexGen Systems',
 		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
+			"NexGen Systems consistently delivers outstanding software solutions. Their team's technical prowess, under John's leadership, has significantly enhanced our IT infrastructure. Highly impressed.",
+		image: '/assets/images/feedback/fb6.png',
 	},
 	{
 		id: 7,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
+		name: 'Liam Thompson',
+		position: 'CEO/Founder TechFusion Innovations',
 		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
-	},
-	{
-		id: 8,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
-		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
-	},
-	{
-		id: 9,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
-		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
-	},
-	{
-		id: 10,
-		name: 'Nguyễn Văn A',
-		position: 'CEO',
-		message:
-			'DOB Tech is an outstanding software development companyDOB Tech is an outstanding . Their expertise, communication, software development company. ',
+			"Exceptional software solutions from Dob Tech. Their team's skillful approach, guided by John, resulted in a successful project that's making waves in the market.",
+		image: '/assets/images/feedback/fb7.png',
 	},
 ];
 
@@ -135,7 +121,7 @@ const Content: FC = () => {
 						<div className="relative p-10 mx-auto h-full bg-white rounded-[24px] flex flex-col justify-start items-start gap-4">
 							{/* Show Avatar */}
 							<Image
-								src="/assets/images/feedback/default.png"
+								src={item.image}
 								alt={item.id.toString()}
 								fill={true}
 								sizes="100vw"

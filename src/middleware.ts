@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 
-let locales = ['en', 'es'];
+let locales = ['en', 'vi'];
 export let defaultLocale = 'en';
 
 function getLocale(request: Request): string {
@@ -18,21 +18,29 @@ function getLocale(request: Request): string {
 }
 
 export function middleware(request: NextRequest) {
-	let locale = getLocale(request) ?? defaultLocale;
 	const pathname = request.nextUrl.pathname;
 
-	const newUrl = new URL(`/${locale}${pathname}`, request.nextUrl);
+	const pathnameIsMissingLocale = locales.every(
+		(locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+	);
 
-	// e.g. incoming request is /products
-	// The new URL is now /en/products
-	return NextResponse.rewrite(newUrl);
+	if (pathnameIsMissingLocale) {
+		let locale = getLocale(request) ?? defaultLocale;
+
+		const newUrl = new URL(`/${locale}${pathname}`, request.nextUrl);
+
+		// e.g. incoming request is /products
+		// The new URL is now /en/products
+		return NextResponse.rewrite(newUrl);
+	}
 }
 
 export const config = {
 	matcher: [
 		// Skip all internal paths (_next)
-		'/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)',
+		'/((?!api|_next/static|_next/image|assets|sw.js).*)',
 		// Optional: only run on root (/) URL
 		'/',
+		'/api'
 	],
 };

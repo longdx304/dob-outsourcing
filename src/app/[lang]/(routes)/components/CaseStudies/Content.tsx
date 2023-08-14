@@ -1,8 +1,8 @@
 'use client';
 import Container from '@/components/Layout/Container';
 import { ILanguageProps } from '@/lib/types';
-import { FC, useState } from 'react';
-import MenuItem from './MenuItem';
+import { FC } from 'react';
+// import MenuItem from './MenuItem';
 import { homepage } from '@public/locales/homepage';
 import Manufacture from '@public/assets/icon/CaseStudies/Manufacture';
 import Fintech from '@public/assets/icon/CaseStudies/Fintech';
@@ -53,24 +53,27 @@ const menuItem = (lang: string): IMenuData[] => [
 const cardItems = (lang: string): any => [
 	{
 		key: '1',
-		title: 'Remitano',
+		title: 'Outing',
 		description:
-			'Custom digital experiences strategically designed to improve brand visibility, engagement and conversions',
-		image: '/assets/images/case-studies/remitano1.png',
+			'A short journey made by a group of people, usually for pleasure or education',
+		image: '/assets/images/case-studies/outing.png',
+		link: 'https://outing.vn/ ',
 	},
 	{
 		key: '2',
 		title: 'Remitano',
 		description:
 			'Custom digital experiences strategically designed to improve brand visibility, engagement and conversions',
-		image: '/assets/images/case-studies/remitano1.png',
+		image: '/assets/images/case-studies/remitano2.png',
+		link: 'https://remitano.com/home/eu',
 	},
 	{
 		key: '3',
-		title: 'Remitano',
+		title: 'Sqly.ai',
 		description:
-			'Custom digital experiences strategically designed to improve brand visibility, engagement and conversions',
-		image: '/assets/images/case-studies/remitano1.png',
+			'Unleash AI-Enabled Data Querying for Google Sheets, CSVs, and any Databases. Streamline analysis, maximize efficiency, and make informed decisions effortlessly.',
+		image: '/assets/images/case-studies/sqly_ai.png',
+		link: 'https://sqly.ai/',
 	},
 	{
 		key: '4',
@@ -78,16 +81,17 @@ const cardItems = (lang: string): any => [
 		description:
 			'Custom digital experiences strategically designed to improve brand visibility, engagement and conversions',
 		image: '/assets/images/case-studies/remitano1.png',
+		link: 'https://remitano.com/home/eu',
 	},
 ];
 
 const Content: FC<ILanguageProps> = ({ lang }) => {
-	const menu = menuItem(lang);
+	// const menu = menuItem(lang);
 	const cardList = cardItems(lang);
-	const [active, setActive] = useState(menu[0].key);
+	// const [active, setActive] = useState(menu[0].key);
 	return (
 		<Container>
-			<MenuItem data={menu} active={active} setActive={setActive} />
+			{/* <MenuItem data={menu} active={active} setActive={setActive} /> */}
 			<CardList data={cardList} lang={lang} />
 		</Container>
 	);

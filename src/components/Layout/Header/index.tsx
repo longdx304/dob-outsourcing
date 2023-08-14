@@ -10,6 +10,7 @@ import { handleScrollToElement } from '@/lib/utils';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { fadeInLeft, fadeInRight } from '@/lib/animation';
 import { PATHS } from '@/lib/path';
+import Image from 'next/image';
 
 interface HeaderProps {
 	lang: string;
@@ -43,8 +44,17 @@ const Header: FC<HeaderProps> = ({ lang }) => {
 				>
 					<motion.span
 						variants={fadeInRight}
-						className="title regular hover:cursor-pointer"
+						className="title regular hover:cursor-pointer flex gap-4"
 					>
+						<Image
+							src={'/assets/images/layout/Logo1.png'}
+							alt="logo-header"
+							// fill={true}
+							sizes="100vw"
+							width={22}
+							height={40}
+							className='object-contain'
+						/>
 						<Link href={PATHS.HOME}>{common[lang]?.dob_tech}</Link>
 					</motion.span>
 					<motion.div variants={fadeInLeft}>
