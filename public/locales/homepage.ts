@@ -78,7 +78,7 @@ export const homepage: Record<string, any> = {
 			titleTech2: '100+',
 			titleTech3: '5+',
 			descriptionTech1: 'We have been operating in this field for over 4 years',
-			descriptionTech2: 'We have successfully completed over 20 projects',
+			descriptionTech2: 'We have successfully completed over 100 projects',
 			descriptionTech3: 'We have executed projects in 5 countries',
 		},
 		feedBack: {
@@ -174,7 +174,7 @@ export const homepage: Record<string, any> = {
 			titleTech2: '100+',
 			titleTech3: '5+',
 			descriptionTech1: 'We have been operating in this field for over 4 years',
-			descriptionTech2: 'We have successfully completed over 20 projects',
+			descriptionTech2: 'We have successfully completed over 100 projects',
 			descriptionTech3: 'We have executed projects in 5 countries',
 		},
 		feedBack: {
