@@ -21,8 +21,7 @@ const ContentMobile: FC<ILanguageProps> = ({ lang }) => {
 	return (
 		<motion.div
 			initial="hidden"
-			whileInView="visible"
-			transition={{ staggerChildren: 0.25 }}
+			animate="visible"
 		>
 			<Container className="py-12">
 				{dataService.map((item, index) => (

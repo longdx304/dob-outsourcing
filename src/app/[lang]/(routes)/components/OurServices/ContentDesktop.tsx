@@ -118,7 +118,8 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 									>
 										{item.description}
 									</p>
-									<Button
+									{/* Button Explora */}
+									{/* <Button
 										className={`
 									body-text-1 regular text-start opacity-0 translate-x-1/2 transition-all ease-out duration-300 flex my-5 gap-2 h-[2.5rem]
 									${
@@ -129,7 +130,7 @@ const ContentDesktop: FC<ILanguageProps> = ({ lang }) => {
 									>
 										<span>{homepage[lang].btnExplora}</span>
 										<IconTopLeft />
-									</Button>
+									</Button> */}
 								</div>
 							</div>
 						</SwiperSlide>
