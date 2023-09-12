@@ -21,7 +21,7 @@ const CardList: FC<ICardListProps> = ({ data, lang }) => {
 			{data.map((item: any) => (
 				<div
 					key={item.key}
-					className="relative flex flex-col justify-end relative desktop:max-w-[450px] desktop:h-[400px] mobile:max-w-[380px] mobile:h-[220px] overflow-hidden rounded-lg
+					className="relative flex flex-col justify-end relative desktop:w-[450px] desktop:h-[400px] mobile:w-[380px] mobile:h-[220px] overflow-hidden rounded-lg
 					group hover:cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg shadow-indigo-600/20 hover:shadow-lg hover:shadow-indigo-500/100"
 				>
 					<Image
