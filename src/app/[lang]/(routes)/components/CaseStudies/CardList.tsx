@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import IconTopLeft from '@public/assets/icon/IconTopLeft';
 import Image from 'next/image';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { flipInY } from '@/lib/animation';
 
