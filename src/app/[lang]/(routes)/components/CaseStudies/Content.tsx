@@ -77,11 +77,11 @@ const cardItems = (lang: string): any => [
 	},
 	{
 		key: '4',
-		title: 'Remitano',
+		title: 'Awst.io',
 		description:
-			'Custom digital experiences strategically designed to improve brand visibility, engagement and conversions',
-		image: '/assets/images/case-studies/remitano1.png',
-		link: 'https://remitano.com/home/eu',
+			'Awst.io',
+		image: '/assets/images/case-studies/awst.png',
+		link: 'https://awst.io',
 	},
 ];
 
