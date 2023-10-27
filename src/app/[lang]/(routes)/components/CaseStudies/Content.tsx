@@ -80,7 +80,7 @@ const cardItems = (lang: string): any => [
 		title: 'Awst.io',
 		description:
 			'Awst.io',
-		image: '/assets/images/case-studies/awst.png',
+		image: '/assets/images/case-studies/awst2.png',
 		link: 'https://awst.io',
 	},
 ];
